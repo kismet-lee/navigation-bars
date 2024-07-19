@@ -1,105 +1,195 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-    height: 100vh;
-    background-color: #fff;
+  height: 100vh;
+  background-color: #fff;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
 }
 
 a:hover {
-    color: rgb(0, 63, 158);
+  color: rgb(0, 63, 158);
 }
 
 /*HEADER*/
 
 header {
-    position: relative;
-    padding: 0 2rem;
+  position: relative;
+  padding: 0 2rem;
+  border: 1px solid black;
+
 }
 
 .navbar {
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navbar .links {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .navbar .toggle-btn {
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
 /* DROPDOWN MENU */
 
 .dropdown-menu {
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0;
-    width: 300px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    transition:  height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown-menu.open{
-    height: 240px;
+.dropdown-menu.open {
+  height: 240px;
 }
 
 .dropdown-menu li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* RESPONSIVE DESIGN */
+/* MAIN BODY STYLING  */
+.main-grid {
+  height: 88vh;
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.container {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 4;
+  grid-row-end: 11;
+
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  border: 1px solid black;
+
+}
+
+.image {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 7;
+
+  background-image: url(https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg);
+}
+
+
+.text-wrapper {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 6;
+
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1rem;
+
+}
+
+/* FOOTER STYLING */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 24px 24px;
+  color: white;
+  background-color: rgb(82, 82, 82);
+}
+/* RESPONSIVE DESIGN FOR NAVIGATION */
 
 @media (max-width: 992px) {
-    .navbar .links {
-       display: none; 
-    }
+  .navbar .links {
+    display: none;
+  }
 
-    .navbar .toggle-btn {
-        display: block;
-    }
+  .navbar .toggle-btn {
+    display: block;
+  }
 
-    .dropdown-menu {
-        display: block;
-    }
+  .dropdown-menu {
+    display: block;
+  }
+
+  .container {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 12;
+  }
 }
 
 @media (max-width: 576px) {
-    .dropdown-menu {
-        left: 2rem;
-        width: unset;
-    }
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+
+  .image {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 7;
+  
+    background-image: url(https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg);
+  }
+
+  
+.text-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  
+  }
 }
