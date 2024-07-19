@@ -10,7 +10,7 @@ body {
   background-color: #fff;
 }
 
-li {
+ul li {
   list-style: none;
 }
 
@@ -30,7 +30,6 @@ header {
   position: relative;
   padding: 0 2rem;
   border: 1px solid black;
-
 }
 
 .navbar {
@@ -84,7 +83,7 @@ header {
 }
 
 .dropdown-menu li a {
-color: white;
+  color: white;
 }
 
 /* MAIN BODY STYLING  */
@@ -96,18 +95,31 @@ color: white;
   grid-template-rows: repeat(12, 1fr);
 }
 
+.sidenav {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 12;
+
+  padding: 16px;
+  border: 1px solid black;
+}
+
+.sidenav ol {
+  padding: 16px;
+}
+
 .container {
   grid-column-start: 3;
-  grid-column-end: 11;
-  grid-row-start: 3;
-  grid-row-end: 11;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 12;
 
   display: grid;
   gap: 0.5em;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   border: 1px solid black;
-
 }
 
 .image {
@@ -119,7 +131,6 @@ color: white;
   background-image: url(https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg);
 }
 
-
 .text-wrapper {
   grid-column-start: 4;
   grid-column-end: 7;
@@ -129,18 +140,12 @@ color: white;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   font-size: 1rem;
-
 }
 
-.social-wrapper {
-display: flex;
-flex-direction: row;
-gap: 16px;
-}
-i {
-font-size: 24px;
+.text-wrapper a {
+  color: blue;
 }
 
 /* FOOTER STYLING */
@@ -169,11 +174,18 @@ footer {
     display: block;
   }
 
+  .sidenav {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 10;
+    grid-row-end: 13;
+  }
+
   .container {
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 2;
-    grid-row-end: 12;
+    grid-row-end: 10;
   }
 }
 
@@ -183,26 +195,39 @@ footer {
     width: unset;
   }
 
+  .sidenav {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 10;
+    grid-row-end: 13;
+
+    background-color: white;
+    z-index: 1;
+  }
+
+  .container {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-end: 9;
+  }
   .image {
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 5;
     grid-row-end: 7;
-  
+
     background-image: url(https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg);
   }
 
-  
-.text-wrapper {
+  .text-wrapper {
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 4;
-  
+
     padding: 8px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-  
   }
 }
