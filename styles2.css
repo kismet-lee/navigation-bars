@@ -98,69 +98,63 @@ header {
   color: white;
 }
 
-main {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
-  grid-column: 1 / 13;
-  grid-row: 2 / 12;
-}
-
 .container {
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
-  grid-column: 3 / 13;
-  grid-row: 1 / 8;
+  grid-column: 3/ 13;
+  grid-row: 2 / 10;
   border: 1px solid black;
 }
 
-.image {
-  grid-column: 1 / 5;
-  grid-row: 1 / 8;
-
-  background-image: url(https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg);
+.container h2 {
+  grid-column: 1 / 7;
+  grid-row: 1 / 2;
+  padding: 24px;
 }
 
 .text-wrapper {
-  grid-column: 5 / 10;
-  grid-row: 2 / 5;
-
-  padding: 16px;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-size: 1rem;
+  padding: 24px;
+  grid-column: 1 / 7;
+  grid-row: 2 / 9;
 }
-
-.social-wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
+.image-wrapper {
+  grid-column: 7 / 11;
+  grid-row: 1 / 9;
 }
-i {
-  font-size: 24px;
+.image-wrapper img {
+  height: 100%;
+}
+.container a button {
+  height: 32px;
+  width: 112px;
 }
 
 .container-list {
-grid-column: 1 / 3;
-grid-row: 1 / 8;
-border: 1px solid black;
-padding: 1em;
+  grid-column: 1 / 3;
+  grid-row: 2 / 10;
+  border: 1px solid black;
+  padding: 1em;
 }
 
 ol {
-padding: 0.5em;}
+  padding: 0.5em;
+}
 
 ol li a {
-color: darkblue;}
+  color: darkblue;
+}
 
 /* FOOTER STYLING */
 footer {
   height: 100%;
   display: flex;
   grid-column: 1 / 13;
-  grid-row: 12 / 14;
+  grid-row: 12 / 13;
   align-items: center;
   justify-content: center;
   padding: 24px 24px;
@@ -183,45 +177,41 @@ footer {
     display: block;
   }
 
-  main {
-    grid-column-start: 2;
-    grid-column-end: 12;
-    grid-row-start: 2;
-    grid-row-end: 12;
-  }
-
   .container {
-    grid-column: 1 / 11;
-    grid-row: 2 / 9;
+    grid-column: 3 / 13;
+    grid-row: 2 / 12;
   }
 
-  .image {
-    grid-row: 1 / 9;
+  .image-wrapper {
+    grid-column: 7 / 11;
+    grid-row: 1 / 12;
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 715px) {
   .dropdown-menu {
     left: 2rem;
     width: unset;
   }
   .container {
-    grid-row: 1 / 11;
+    grid-row: 3 / 12;
+    grid-column: 1 / 13;
+    overflow: auto;
   }
-  .image {
-    grid-column: 1 / 11;
-    grid-row: 8 / 11;
+
+  .container h2 {
+    grid-column: 1 / 8;
+  }
+  .container-list {
+    grid-row: 2 / 3;
+    grid-column: 1 / 13;
   }
 
   .text-wrapper {
-    grid-column-start: 1;
-    grid-column-end: 11;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    grid-column: 1/ 12;
+  }
 
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  .image-wrapper {
+    display: none;
   }
 }
