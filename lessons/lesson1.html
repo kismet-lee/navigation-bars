@@ -14,7 +14,7 @@
       referrerpolicy="no-referrer"
     />
     <title>OWDDM Workshops</title>
-    <link rel="stylesheet" href="styles3.css" />
+    <link rel="stylesheet" href="/styles3.css" />
   </head>
   <body>
     <header>
@@ -41,41 +41,17 @@
     </header>
     <main>
       <div class="container">
-        <div class="image"></div>
+        <!-- <div class="image"></div> -->
         <div class="text-wrapper">
-          <h2>OWDDM Workshop Landing Page</h2>
+          <h2>Lets build a responsive navigation bar</h2>
           <p>
-            Welcome to the OWDDM Workshop Landing page. From here you
-            can look at the sub-navigation bar to get to the completed
-            workshops from past OWDDM events done by Destiny Simmons.
-            If you come across any mistakes with the website or the
-            tutorials, please do not hesitate to
-            <a href="/contact.html">contact Destiny directly</a> to
-            let them know.
+           Let's jump right into building a responsive navigation bar for your website! If you have any questions, <a href="/contact.html">please contact Destiny here</a>.
           </p>
-          <p>
-            Follow OWDDM on LinkedIn, join our meetup group, or join
-            us on Discord to stay up-to-date on our monthly events in
-            Osaka and Kyoto.
-          </p>
-          <div class="social-wrapper">
-            <div>
-              <a href="https://www.linkedin.com/company/99021771/"
-                ><i class="fa-brands fa-linkedin-in"></i
-              ></a>
-            </div>
-            <div>
-              <a href="https://discord.gg/PG6n97NG2B"
-                ><i class="fa-brands fa-discord"></i
-              ></a>
-            </div>
-            <div>
-              <a
-                href="https://www.meetup.com/osaka-web-designers-and-developers-meetup/"
-                ><i class="fa-brands fa-meetup"></i
-              ></a>
-            </div>
-          </div>
+          <p>Open up your preferred text editor. You can download Visual Code Studio here. Or you can use CodePen, a web-based code editor.</p>
+          <img src="#" alt="Image of Visual Studio Code Opened">
+            
+         
+      
         </div>
       </div>
       <div class="container-list">
@@ -83,11 +59,18 @@
         <p>You can find the workshop links here</p>
         <ol>
           <li>
-            <a href="/lessons/lesson1.html"
-              >Let's build a responsive navigation bar</a
-            >
+            <a class="active" href="lesson1.html">Let's build a responsive navigation bar</a>
           </li>
         </ol>
+      </div>
+      <div class="pagination-wrapper">
+        <h4>Lesson Pagination</h4>
+        <ul class="pagination">
+          <li><a href="/lessons/lesson1.html" class="active">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+        </ul>
       </div>
     </main>
     <footer>
@@ -96,5 +79,5 @@
       </div>
     </footer>
   </body>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </html>
